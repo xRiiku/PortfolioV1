@@ -1,0 +1,699 @@
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+
+
+/* ---------------------- NAV BAR -------------------------------------- */
+.navbar {
+    border-bottom: solid 1px;
+}
+
+.navicon {
+    display: none;
+}
+.main-menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.main-menu li a {
+    text-decoration: none;
+    color: black;
+}
+.main-menu ul {
+    display: flex;
+    gap: 3rem;
+    font-size: 20pt;
+}
+
+.main-menu ul li {
+    list-style: none;
+    margin: 0 1rem;
+    cursor: pointer;
+    position: relative;
+}
+.main-menu ul li::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 2px;
+    width: 100%;
+    transform: scaleX(0);
+    background-color: red;
+    transform-origin: bottom right;
+    transition: transform 0.5s ease-out;
+}
+
+.main-menu ul li:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+.logo img {
+    max-width: 11rem;
+}
+
+/* ---------------------- INTRO -------------------------------------- */
+
+.intro {
+    display: flex;
+    margin-top: 7rem;
+    padding: 2rem 4rem;
+}
+
+.left {
+    align-items: flex-start;
+    display: flex;
+    flex: 1 1;
+    flex-direction: column;
+}
+
+.left>:first-child {
+    background-color: black;
+    border-radius: 5px;
+    color: white;
+    padding: 0.5rem 1rem;
+    font-size: 25pt;
+}
+
+.typing-demo {
+    border-right: 3px solid orange;
+    font-size: 46pt;
+    font-weight: 700;
+    overflow: hidden;
+    white-space: nowrap;
+    width: 22ch;
+    animation: type2 2s steps(40, end),
+    blink-caret .75s step-end infinite;
+    animation-delay: 1s;
+}
+
+@keyframes type2 {
+    0% {
+        width: 0;
+    }
+    1% {
+        opacity: 1;
+    }
+    99.9% {
+        border-right: .15em solid orange;
+    }
+    100% {
+        opacity: 1;
+        border: orange;
+    }
+}
+
+.left>:nth-child(3) {
+    color: grey;
+    opacity: .7;
+    font-size: 20pt;
+}
+
+.left>:nth-child(4) {
+    color: rgb(92, 91, 91);
+    margin-top: 2rem;
+    text-align: justify;
+    font-size: 22pt;
+}
+
+.right {
+    align-items: center;
+    display: flex;
+    flex: 1 1;
+    justify-content: center;
+}
+
+.follow {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    left: 1.5rem;
+    position: relative;
+    top: 1rem;
+}
+
+.follow span {
+    color: black;
+    transform: rotate(90deg);
+    text-transform: uppercase;
+    width: 160px;
+}
+
+.follow hr {
+    border-color: black;
+    margin-bottom: 2rem;
+    margin-top: 3rem;
+    width: 60px;
+    transform: rotate(90deg);
+}
+
+.icons img {
+    max-width: 5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.icons img:hover {
+    opacity: 0.7;
+}
+
+/* ---------------------- SKILLS -------------------------------------- */
+
+.skills {
+    color: white;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    justify-content: center;
+    margin-top: 1rem;
+    padding: 2rem 4rem;
+}
+
+.skills>:first-child {
+    font-size: 48pt;
+    font-weight: 700;
+}
+
+.github-skills-logo {
+    filter: invert(1);
+}
+
+.skills-logos {
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+}
+
+.skills h2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 3rem;
+}
+.learned, .learning{
+    border: 2px solid rgba(233, 233, 8, 0.836);
+    gap: 1rem;
+}
+
+/* ---------------------- PORTFOLIO -------------------------------------- */
+.portfolio {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 2rem 4rem;
+}
+
+.portfolio h2 {
+    font-size: 48pt;
+    font-weight: 700;
+    padding-bottom: 3rem;
+    text-align: center;
+}
+
+.portfolio__container {
+    width: 100%;
+    border-radius: 10px;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.portfolio__info {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.portfolio__text {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 15px;
+    overflow: hidden;
+    width: 28%;
+    flex-wrap: wrap;
+    padding: 10px;
+}
+
+.portfolio__text img {
+    width: 100%;
+    border-radius: 10px;
+    align-items: flex-start;
+}
+
+.portfolio__desc {
+    font-size: 1.6rem;
+}
+
+.portfolio__lang span {
+    background-color: rgb(171, 171, 243);
+    color: #fff;
+    border-radius: 10px;
+    padding: 1px 6px;
+    font-size: 18pt;
+}
+
+.portfolio__link a {
+    text-decoration: none;
+    color: white;
+    background-color: rgb(171, 171, 243);
+    border-radius: 15px;
+    padding: 3px 6px;
+    font-size: 14pt;
+
+}
+
+.portfolio__link a:hover {
+    color: white;
+    text-decoration: none;
+}
+
+
+/* ---------------------- CONTACT-------------------------------------- */
+
+.contact {
+    display: flex;
+    margin-top: 7rem;
+    padding: 0.5rem 5rem;
+}
+
+.c-left {
+    display: flex;
+    flex: 1 1;
+    flex-direction: column;
+    gap: 5rem;
+    justify-content: flex-start;
+}
+
+.contact .c-left>:first-child {
+    font-size: 48pt;
+    font-weight: 700;
+}
+
+.c-callme {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.call {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.c-conteiner {
+    align-items: center;  
+    display: flex;
+    justify-content: center;
+    padding: 0.8rem;
+}
+
+.call-text {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.call .call-text>:first-child {
+    color: rgb(128, 128, 240);
+}
+
+.call-text>:nth-child(2) {
+    font-size: 16pt;
+}
+
+.c-right {
+    align-items: flex-start;
+    display: flex;
+    flex: 1 1;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.c-right>form {
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.contact .c-right .data, .contact .c-right .phone {
+    display: flex;
+    gap: 2rem;
+}
+
+.c-right .user {
+    background-color: transparent;
+    border: 2px solid gray;
+    border-radius: 5px;
+    height: 3rem;
+    outline: none;
+    width: 15rem;
+}
+
+.contact textarea {
+    height: 6rem!important;
+    width: 32.5rem!important;
+}
+
+.button-s {
+    font-size: 15pt;
+    font-weight: 400;
+    margin-top: 2rem;
+    padding: 1rem 3rem;
+    border: none;
+    border-radius: 8px;
+    background-color: rgb(128, 128, 240);
+    color: white
+}
+
+
+
+
+/* ---------------------- DARK MODE -------------------------------------- */
+
+.container-btn-mode{
+    display: flex;
+    align-self: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 2;
+    font-size:0;
+}
+.btn-mode{
+    display: inline-block;
+    width: 50px;
+    height: 30px;
+    border:2px solid black;
+    transition: background-color .5s;
+}
+.btn-mode i {
+    display: block;
+    font-size: 17px;
+    text-align: center;
+    line-height: 30px;
+}
+.btn-mode.sun{
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border-right: 1px solid transparent;
+}
+.btn-mode.moon{
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+.active{
+    background-color:black;
+    color:#ffcd5c !important;
+}
+
+
+
+.dark-mode{
+    background-color: #0e0e0e;
+    color: white;
+    transition:background-color .5s;
+}
+.dark-mode .body{
+    background-color: #1A1C1E;
+}
+.dark-mode p, .dark-mode span, .dark-mode h1, .dark-mode h2, .dark-mode .btn-contact, .dark-mode ul li a{
+    color:white;
+}
+
+
+.darkmode .navbar {
+    border-bottom: solid 1px color white;
+}
+.dark-mode .btn-mode{
+    background-color:#1A1C1E;
+    border:1px solid white;
+    color:white;
+}
+
+/* INTRO */
+.dark-mode .intro .left>:first-child {
+    background-color: white;
+    color: black;
+}
+
+.dark-mode .intro .right .follow hr, .dark-mode .intro .right .follow span {
+    border-color: white;
+    color: white;
+}
+
+.darkmode .intro .left .typing-demo {
+    animation: type2 2s steps(40, end),
+    blink-caret .75s step-end infinite;
+    animation-delay: 1s;
+}
+.dark-mode .icons img {
+    filter: invert(1);
+}
+
+/* ---------------------- SKILLS -------------------------------------- */
+
+.dark-mode .skills {
+    background-color: white;
+}
+
+.dark-mode .skills>:first-child {
+    color: black;
+}
+
+.dark-mode h2 {
+    color: black;
+}
+
+.dark-mode .bootstrap-skills-logo{
+    filter: invert(1);
+}
+
+/* ---------------------- CONTACT -------------------------------------- */
+.dark-mode .c-right .user{
+    color: white;
+}
+
+
+
+/* ---------------------- RESPONSIVE NAVBAR-------------------------------------- */
+@media (max-width: 968px) {
+    
+    .logo {
+        padding-left: 25px;
+    }
+
+    .container-btn-mode {
+        position: relative;
+    }
+
+    .navicon {
+        display: flex;
+        top: 25px;
+        right: 25px;
+    }
+
+    nav img{
+        padding: 25px 0;
+    }
+
+    .main-menu {
+        height: 25vh;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        display: none;
+    }
+
+    .main-menu ul{
+        flex-direction: column;
+        justify-content: center;
+        align-items:flex-start;
+        
+    }
+
+
+    .main-menu.open{
+        display: flex;
+        
+    }
+}
+
+
+/* ---------------------- RESPONSIVE INTRO-------------------------------------- */
+@media screen and (max-width:1275px) {
+    .right img{
+        transform: scale(0.8);
+    }
+    .follow{
+        display: none;
+    }
+}
+
+
+@media screen and (max-width:1110px) {
+
+    .intro{
+        flex-direction: column;
+        padding: 0.5rem 1rem;
+        margin-top: 5rem;
+    }
+
+    .left>:nth-child(1){
+        margin-bottom: 1rem;
+    }
+
+    .left>:nth-child(2){
+        font-size: 28pt;
+    }
+
+    .left>:nth-child(3){
+        font-size: 10pt;
+    }
+    .right {
+        justify-content: flex-start;
+    }
+    .fondo{
+        display: none;
+    }
+    .follow{
+        display: flex;
+        top: 3rem;
+    }
+
+    .follow span, hr {
+        display: none;
+    }
+
+    .icons{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: row;
+        padding-bottom: 50px;
+        padding-left: 150px;
+    }
+
+}
+    
+@media screen and (max-width:480px){
+    .intro{
+        padding: 2.2rem 0.25rem;
+    }
+
+    .left>:nth-child(4){
+        font-size: 12pt !important;
+    }
+        
+    .typing-demo{
+        width: 23ch;
+        font-size: 19pt !important;
+    }
+
+    .icons {
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-start;
+        flex-direction: row;
+        padding-left: 0;
+    }
+}
+
+
+
+
+/* ---------------------- RESPONSIVE PORTFOLIO-------------------------------------- */
+
+@media screen and (max-width:860px) {
+    .portfolio__info {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .portfolio__text {
+        width: 48%;
+        flex-wrap: wrap;
+        padding: 10px;
+    }
+}
+
+@media screen and (max-width: 680px) {
+
+    .portfolio__text {
+        width: 80%;
+        flex-wrap: wrap;
+        padding: 10px;
+    }
+}
+
+@media screen and (max-width: 554px){
+    .portfolio__text {
+        width: 90%;
+        flex-wrap: wrap;
+        padding: 10px;
+    }
+}
+
+@media screen and (max-width: 434px){
+    .portfolio__text {
+        width: 80%;
+        flex-wrap: wrap;
+        padding: 10px;
+    }
+    .portfolio__text img {
+        width: 80%;
+    }
+}
+
+
+
+/* ---------------------- RESPONSIVE CONTACT-------------------------------------- */
+@media screen and (max-width:1110px){
+    .contact{
+        flex-direction: column;
+        align-items:center;
+        padding: 4.2rem 1rem;
+    }
+
+    .c-left:nth-child(1){
+        font-size: 20pt;
+    }
+    
+    .c-right{
+        align-items: flex-start;
+    }
+    .c-right>form{
+        align-items: center;
+        justify-content: center;
+    }
+        
+    .user{
+        width: 10rem;
+    }
+
+    .data{
+        flex-direction: column;
+        padding-top: 2rem;
+    }
+
+    .phone{
+        flex-direction: column;
+    }
+    
+    textarea{
+        max-width: 17rem !important;
+    }
+}
